@@ -3,5 +3,22 @@ layout: layout.liquid
 title: 11ty Boilerplate
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<h1>Random Name <strong>Generator</strong></h1>
+<div x-data="nameGenerator()">
+    <h1 x-text="currentName"></h1>
+    <button @click="getRandomName()" class="generate-btn">
+        generate Name
+    </button>
+</div>
+
+<script>
+    function nameGenerator() {
+        return{
+            currentName: 'Generate',
+            getRandomName() {
+                const randomIndex = getrandomIndex(namesList.length);
+                this.currentName = namesList[randomIndex];
+            }
+        }
+    }
+</script>
