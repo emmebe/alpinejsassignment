@@ -11,6 +11,6 @@ const listNames = [
     "Last Name"
 ];
 
-function getRandomName(max) {
+function getRandomIndex(max) {
     return Math.floor(Math.random() * max);
 }
